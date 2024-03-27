@@ -1,0 +1,26 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model tb_backend {
+  ID   Int    @id
+  Name String
+
+  @@map("tb-backend")
+}
+
+model faculty {
+  id    Int   @id @default(autoincrement())
+  name  String
+}
+
+model students {
+  id      Int     @id @default(autoincrement())
+  name    String  @db.VarChar(255)
+  address String? @db.VarChar(255)
+}
