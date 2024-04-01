@@ -74,7 +74,7 @@ app.post('/login', (req, res) => {
 
 // Students Endpoints with Prisma
 
-// Get all students
+// Get all students (Prisma Get)
 app.get('/students', async (req, res) => {
     try {
         const allStudents = await prisma.students.findMany();
@@ -85,7 +85,7 @@ app.get('/students', async (req, res) => {
     }
 });
 
-// Add a student
+// Add a student (Prisma Add)
 app.post('/students', async (req, res) => {
     const { name, address } = req.body;
     try {
@@ -112,7 +112,7 @@ app.post('/students', async (req, res) => {
     }
 });
 
-// Update student by ID
+// Update student by ID (Prisma Update)
 app.put('/students/:id', async (req, res) => {
     const { name, address } = req.body;
     const idStudent = parseInt(req.params.id);
@@ -143,7 +143,7 @@ app.put('/students/:id', async (req, res) => {
     }
 });
 
-// Delete student by ID
+// Delete student by ID (Prisma Delete)
 app.delete('/students/:id', async (req, res) => {
     const idStudent = parseInt(req.params.id);
     try {
@@ -162,7 +162,7 @@ app.delete('/students/:id', async (req, res) => {
     }
 });
 
-// Get student by ID
+// Get student by ID (Prisma Get)
 app.get('/students/:id', async (req, res) => {
     const idStudent = parseInt(req.params.id);
     try {
