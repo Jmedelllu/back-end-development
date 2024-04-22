@@ -2,7 +2,7 @@ const express = require('express')
 const app = express()
 const morgan = require('morgan')
 const cors = require('cors')
-const studentsController = require("./students/students.controller");
+const menuController = require("./menu/menu.controller");
 
 const hostname = '127.0.0.1'
 const port = 3000
@@ -38,12 +38,12 @@ app.post('/login', (req, res) => {
 app.get('/', (req, res) => {
     res.json({
         status: "success",
-        message: "Welcome to Home"
+        message: "Welcome to our Restaurant"
     })
 })
 
 //Exe 9
-app.use('/students', studentsController);
+app.use('/menu', menuController);
 
 
 //routing 404
