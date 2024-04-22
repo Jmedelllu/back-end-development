@@ -14,13 +14,8 @@ model tb_backend {
   @@map("tb-backend")
 }
 
-model faculty {
-  id    Int   @id @default(autoincrement())
-  name  String
-}
-
-model students {
-  id      Int     @id @default(autoincrement())
-  name    String  @db.VarChar(255)
-  address String? @db.VarChar(255)
+model menu {
+  no    Int    @id @default(autoincrement())
+  name  String @db.VarChar(255)
+  price String @db.VarChar(255)
 }
