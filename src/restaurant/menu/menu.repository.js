@@ -1,4 +1,4 @@
-const prisma = require("../db")
+const prisma = require("../../db")
 
 const findMenu = async () => {
     const menu = await prisma.menu.findMany()

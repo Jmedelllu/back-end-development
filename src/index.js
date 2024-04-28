@@ -2,7 +2,8 @@ const express = require('express')
 const app = express()
 const morgan = require('morgan')
 const cors = require('cors')
-const menuController = require("./menu/menu.controller");
+const menuController = require("./restaurant/menu/menu.controller");
+const userController = require("./restaurant/user/user.controller");
 
 const hostname = '127.0.0.1'
 const port = 3000
@@ -42,8 +43,9 @@ app.get('/', (req, res) => {
     })
 })
 
-//Exe 9
-app.use('/menu', menuController);
+//Menu Controller
+app.use('/menu', menuController),
+app.use('/user', userController);
 
 
 //routing 404
