@@ -36,10 +36,10 @@ router.post("/", async (req, res) => {
 
 
 //Update User by ID
-router.put("/:no", async (req, res) => {
+router.put("/:id", async (req, res) => {
     try{
         const newUserData = req.body;
-        const idUser = parseInt(req.params.no);
+        const idUser = parseInt(req.params.id);
 
         const user = await updateUserByID(idUser, newUserData);
 
@@ -54,8 +54,8 @@ router.put("/:no", async (req, res) => {
 })
 
 //Delete User by ID
-router.delete("/:no", async (req, res) => {
-    const idUser = parseInt(req.params.no);
+router.delete("/:id", async (req, res) => {
+    const idUser = parseInt(req.params.id);
     try {
         const user = await deleteUserByID(idUser);
 
@@ -70,8 +70,8 @@ router.delete("/:no", async (req, res) => {
 })
 
 //Get User by ID
-router.get('/:no', async (req, res) => {
-    const idUser = parseInt(req.params.no);
+router.get('/:id', async (req, res) => {
+    const idUser = parseInt(req.params.id);
     try {
         const user = await getUserByID(idUser);
         res.json(user);

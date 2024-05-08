@@ -1,7 +1,7 @@
 {
 	"info": {
 		"_postman_id": "e43b9305-ba95-40f0-95d3-06a90654bc27",
-		"name": "Final Project Back End",
+		"name": "Final Project Back End, (menu & user)",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "32475680"
 	},
@@ -27,6 +27,137 @@
 					]
 				},
 				"url": {
+					"raw": "http://127.0.0.1:3000/menu/20",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"menu",
+						"20"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:3000/menu",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "no",
+							"value": "20",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "Ayam Lalapan",
+							"type": "text"
+						},
+						{
+							"key": "price",
+							"value": "23000",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3000/menu/20",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"menu",
+						"20"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:3000/menu",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "no",
+							"value": "20",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "Bebek Goreng Rempah",
+							"type": "text"
+						},
+						{
+							"key": "price",
+							"value": "25000",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3000/menu",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"menu"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:3000/menu",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "no",
+							"value": "20",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "Mie Goreng",
+							"type": "text"
+						},
+						{
+							"key": "price",
+							"value": "23000",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
 					"raw": "http://127.0.0.1:3000/menu/17",
 					"protocol": "http",
 					"host": [
@@ -46,12 +177,20 @@
 		},
 		{
 			"name": "http://127.0.0.1:3000/menu",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
 			"request": {
-				"method": "PUT",
+				"method": "GET",
 				"header": [],
 				"body": {
 					"mode": "urlencoded",
 					"urlencoded": [
+						{
+							"key": "no",
+							"value": "17",
+							"type": "text"
+						},
 						{
 							"key": "name",
 							"value": "Bebek Goreng Rempah",
@@ -65,7 +204,7 @@
 					]
 				},
 				"url": {
-					"raw": "http://127.0.0.1:3000/menu/16",
+					"raw": "http://127.0.0.1:3000/menu",
 					"protocol": "http",
 					"host": [
 						"127",
@@ -75,15 +214,37 @@
 					],
 					"port": "3000",
 					"path": [
-						"menu",
-						"16"
+						"menu"
 					]
 				}
 			},
 			"response": []
 		},
 		{
-			"name": "http://127.0.0.1:3000/menu",
+			"name": "New Request",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:3000/user/3",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
 			"request": {
 				"method": "POST",
 				"header": [],
@@ -91,24 +252,24 @@
 					"mode": "urlencoded",
 					"urlencoded": [
 						{
-							"key": "no",
-							"value": "17",
+							"key": "id",
+							"value": "3",
 							"type": "text"
 						},
 						{
-							"key": "name",
-							"value": "Bebek Goreng Rempah",
+							"key": "user",
+							"value": "Joshua",
 							"type": "text"
 						},
 						{
-							"key": "price",
-							"value": "25000",
+							"key": "address",
+							"value": "Bandung",
 							"type": "text"
 						}
 					]
 				},
 				"url": {
-					"raw": "http://127.0.0.1:3000/menu",
+					"raw": "http://127.0.0.1:3000/user",
 					"protocol": "http",
 					"host": [
 						"127",
@@ -118,42 +279,39 @@
 					],
 					"port": "3000",
 					"path": [
-						"menu"
+						"user"
 					]
 				}
 			},
 			"response": []
 		},
 		{
-			"name": "http://127.0.0.1:3000/menu",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
+			"name": "New Request",
 			"request": {
-				"method": "GET",
+				"method": "PUT",
 				"header": [],
 				"body": {
 					"mode": "urlencoded",
 					"urlencoded": [
 						{
-							"key": "no",
-							"value": "17",
+							"key": "id",
+							"value": "3",
 							"type": "text"
 						},
 						{
-							"key": "name",
-							"value": "Bebek Goreng Rempah",
+							"key": "user",
+							"value": "Joshua",
 							"type": "text"
 						},
 						{
-							"key": "price",
-							"value": "25000",
+							"key": "address",
+							"value": "Surabaya",
 							"type": "text"
 						}
 					]
 				},
 				"url": {
-					"raw": "http://127.0.0.1:3000/menu",
+					"raw": "http://127.0.0.1:3000/user/3",
 					"protocol": "http",
 					"host": [
 						"127",
@@ -163,42 +321,20 @@
 					],
 					"port": "3000",
 					"path": [
-						"menu"
+						"user",
+						"3"
 					]
 				}
 			},
 			"response": []
 		},
 		{
-			"name": "http://127.0.0.1:3000/menu",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
+			"name": "New Request",
 			"request": {
 				"method": "GET",
 				"header": [],
-				"body": {
-					"mode": "urlencoded",
-					"urlencoded": [
-						{
-							"key": "no",
-							"value": "17",
-							"type": "text"
-						},
-						{
-							"key": "name",
-							"value": "Bebek Goreng Rempah",
-							"type": "text"
-						},
-						{
-							"key": "price",
-							"value": "25000",
-							"type": "text"
-						}
-					]
-				},
 				"url": {
-					"raw": "http://127.0.0.1:3000/menu",
+					"raw": "http://127.0.0.1:3000/user/3",
 					"protocol": "http",
 					"host": [
 						"127",
@@ -208,7 +344,30 @@
 					],
 					"port": "3000",
 					"path": [
-						"menu"
+						"user",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:3000/user",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"user"
 					]
 				}
 			},

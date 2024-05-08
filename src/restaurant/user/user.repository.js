@@ -5,10 +5,10 @@ const findUser = async () => {
     return user
 }
 
-const findUserByID = async (no) => {
+const findUserByID = async (id) => {
     const user = await prisma.user.findUnique({
         where: {
-            no: no
+            id: id
         }
     })
     return user
@@ -17,30 +17,30 @@ const findUserByID = async (no) => {
 const insertUser = async (newUserData) => {
     const user = await prisma.user.create({
         data: {
-            no: parseInt(newUserData.no),
-            name: newUserData.name,
+            id: parseInt(newUserData.id),
+            user: newUserData.user,
             address: newUserData.address
         }
     })
     return user
 }
 
-const deleteUser = async (no) => {
+const deleteUser = async (id) => {
     const user = await prisma.user.delete({
         where: {
-            no: no
+            id: id
         }
     })
     return user
 }
 
-const editUserByID = async (no, newUserData) => {
+const editUserByID = async (id, newUserData) => {
     const user = await prisma.user.update({
         where: {
-            no: no
+            id: id
         },
         data: {
-            name: newUserData.name,
+            user: newUserData.user,
             address: newUserData.address
         }
     })
