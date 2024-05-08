@@ -18,7 +18,7 @@ const insertUser = async (newUserData) => {
     const user = await prisma.user.create({
         data: {
             id: parseInt(newUserData.id),
-            name: newUserData.name,
+            user: newUserData.user,
             address: newUserData.address
         }
     })
@@ -40,7 +40,7 @@ const editUserByID = async (id, newUserData) => {
             id: id
         },
         data: {
-            name: newUserData.name,
+            user: newUserData.user,
             address: newUserData.address
         }
     })

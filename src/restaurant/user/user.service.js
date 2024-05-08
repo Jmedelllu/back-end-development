@@ -11,9 +11,9 @@ const getAllUser = async () => {
 }
 
 const addUser = async (newUserData) => {
-    if(!newUserData.name || !newUserData.address){
+    if(!newUserData.user || !newUserData.address){
         throw new Error("id dan alamat pengguna harus diisi");
-    }else if(newUserData.name.length > 2 || newUserData.address.length > 2){
+    }else if(newUserData.user.length > 2 || newUserData.address.length > 2){
         const user = await insertUser(newUserData)
         return user
     }
@@ -23,9 +23,9 @@ const addUser = async (newUserData) => {
 const updateUserByID = async(id, newUserData) =>{
     if(typeof id !== 'number'){
         throw new Error("id harus berupa angka");
-    }else if(!newUserData.name || !newUserData.address){
+    }else if(!newUserData.user || !newUserData.address){
         throw new Error("id dan alamat harus diisi");
-    }else if(newUserData.name.length > 2 || newUserData.address.length > 2){
+    }else if(newUserData.user.length > 2 || newUserData.address.length > 2){
         const user = await editUserByID(id, newUserData)
         return user
     }
